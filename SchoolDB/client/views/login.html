@@ -1,0 +1,26 @@
+<div class="sdb-box-header clearfix screen-header" ng-init="showActivationMessage()">
+    <h3>Login</h3>
+</div>
+<form id="form-edit-course">
+    <h4>Please log in to show students and courses</h4>
+
+    <div class="form-group">
+        <label for="es-user-name">Name</label>
+        <input type="text" class="form-control" name="name" id="es-user-name" ng-model="user.username">
+        
+    </div>
+    <div class="form-group">
+        <label for="es-user-password">Password</label>
+        <input type="password" class="form-control" name="password" id="es-user-password" ng-model="user.password">
+        
+    </div>
+
+
+    <!-- <button id="login-button" type="button" class="btn btn-default" ng-click="checkUser()"> -->
+    <button id="login-button" type="button" class="btn btn-default" ng-click="authenticateUser()">
+            Login
+    </button>
+
+</form>
+</div>
+

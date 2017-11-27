@@ -1,0 +1,122 @@
+<html ng-app="myApp"  ng-controller="mainController">
+        <head>
+            <!-- jQuery CDN -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>            
+            <!-- AngularJS CDN -->
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+            <!-- AngularJS Route module -->
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>         -->
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <!-- Bootstrap JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>          
+            <!-- Local scripts -->
+            <script src="/app.js"></script>
+            <script src="/controllers/courses.js"></script>
+            <script src="/controllers/students.js"></script>
+            <!-- local css -->
+            <link rel="stylesheet" href="/css/style.css">        
+            
+        </head>
+        <body>
+            <!-- header -->
+            <div id="page-header">
+                <nav class="navbar navbar-inverse bg-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        <a class="navbar-brand" href="#">WebSiteName</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">School</a></li>
+                            <li><a href="#">Adminstration</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li>
+                                <span id="header-username">John Doe</span>, <span id="header-role">Manager</span>
+                            </li>
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+                            </li>
+                            <li>
+                                <img src="images/frida.jpg" width="30" height="30" alt="">
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="page-content" class="container-fluid">
+                <div id="static-container">
+                    <!-- list of courses -->
+                    <div id="courses-list" class="col-md-2 sdb-list" ng-init="getCourses()">
+                        <div class="sdb-box-header clearfix">
+                            <h3>Courses</h3>
+                            <button type="button" class="btn btn-default pull-right" aria-label="add-item">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="media" ng-repeat="x in courses">
+                            <div class="media-left">
+                                <img src={{x.image}} class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{x.name}}</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!-- <div class="media">
+                            <div class="media-left">
+                                <img src="/uploads/History.jpg" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Cell Biology</h4>
+                                <p></p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="media">
+                            <div class="media-left">
+                                <img src="images/julius.jpg" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Geometry</h4>
+                                <p></p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="media">
+                            <div class="media-left">
+                                <img src="images/julius.jpg" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Neurophysiology</h4>
+                                <p></p>
+                            </div>
+                        </div> -->
+                    </div> <!--./list of courses-->
+                    <div id="students-list" class="sdb-list col-md-2" ng-init="getStudents()">
+                        <div class="sdb-box-header clearfix">
+                            <h3>Students</h3>
+                            <button type="button" class="btn btn-default" aria-label="add-item">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="media" ng-repeat="x in students">
+                                <div class="media-left">
+                                    <img src={{x.image}} class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">{{x.name}}</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        <!--Place for dynamic students list-->
+                        
+                    </div>
+                    <ng-view></ng-view>
+                </div>
+        </body>
+    </html>
+    
+    
+    

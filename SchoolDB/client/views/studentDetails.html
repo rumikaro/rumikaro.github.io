@@ -1,0 +1,47 @@
+<!-- zone header -->
+<div class="sdb-box-header clearfix" id="student-screen-header" ng-init="getStudentDetails()">
+        <h3>{{student.name}}</h3>
+        <button type="button" class="btn btn-default pull-right" aria-label="add-item" id="edit-student-btn" ng-click="showStudentEdit(student._id)">
+            Edit
+        </button>
+</div>
+
+<!-- student details -->
+<div class="media sdb-big-media" id="student-screen-details">
+     <div class="media-left">
+       <img src="{{student.image}}" class="media-object" >
+     </div>
+     <div class="media-body">
+       <h2 class="media-heading">{{student.name}}</h2>
+       <p class="phone-number">{{student.phone}}</p>
+       <p class="email-adress">{{student.email}}</p>
+     </div>
+ </div> 
+
+<!-- courses registered by current student -->
+<div class="sdb-list" id="student-screen-courses" ng-init="getStudentRegistrations()">
+    <div class="media" ng-repeat="x in studentRegistrations track by $index">
+        <div class="media-left">
+            <img src="{{x.image}}" class="media-object">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{x.name}}</h4>
+        </div>
+    </div>
+    <!-- <div class="media">
+        <div class="media-left">
+            <img src="images/julius.jpg" class="media-object">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">History</h4>
+        </div>
+    </div> -->
+    <!-- <div class="media">
+        <div class="media-left">
+            <img src="images/julius.jpg" class="media-object">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">History</h4>
+        </div>
+    </div> -->
+</div>

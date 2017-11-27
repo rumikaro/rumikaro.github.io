@@ -1,0 +1,13 @@
+<div ui-view='header'></div>
+<div id="page-content" class="container-fluid">
+    <div id="static-container">
+        <div ui-view='coursesList'></div>
+        <div ui-view='studentsList'></div>
+        <div id="main-container" class="col-md-8">
+            <!-- <div ui-view="dynamicZone"></div>        -->
+            <!-- <ui-view></ui-view> -->
+            <div ui-view="dynamic"></div>
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div id="courses-list" class="col-md-2 sdb-list" ng-init="getCourses()">
+    <!-- courses list header -->
+    <div class="sdb-box-header clearfix">
+        <h3>Courses</h3>
+        <button type="button" class="btn btn-default pull-right" aria-label="add-item">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- courses list items -->
+    <div class="media" ng-repeat="x in allCourses track by x._id">
+        <div id={{x._id}} ng-click="showCourseDetails(x._id)">
+            <div class="media-left">
+                <img src={{x.image}} class="media-object">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{x.name}}</h4>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+</div> <!--./list of courses-->

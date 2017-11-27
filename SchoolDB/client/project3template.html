@@ -1,0 +1,346 @@
+
+<html>
+    <head>
+        <title>School Database</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--local js code-->
+        <script src="main.js" type="text/javascript"></script>
+        <!--Local style-->
+        <link href="Style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="page-header">
+            <nav class="navbar navbar-inverse bg-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">School</a></li>
+                    <li><a href="#">Adminstration</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li>
+                        <span id="header-username">John Doe</span>, <span id="header-role">Manager</span>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+                    </li>
+                    <li>
+                        <img src="images/frida.jpg" width="30" height="30" alt="">
+                    </li>
+                    
+                  </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="page-content" class="container-fluid">
+            <div id="static-container">
+                <div id="courses-list" class="col-md-2 sdb-list">
+                    <div class="sdb-box-header clearfix">
+                        <h3>Courses</h3>
+                        <button type="button" class="btn btn-default pull-right" aria-label="add-item">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">History</h4>
+                          <p></p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Cell Biology</h4>
+                          <p></p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Geometry</h4>
+                          <p></p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Neurophysiology</h4>
+                          <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="students-list" class="sdb-list col-md-2">
+                    <div class="sdb-box-header clearfix">
+                        <h3>Students</h3>
+                        <button type="button" class="btn btn-default" aria-label="add-item">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <!--Place for dynamic students list-->
+                    
+                </div>
+            </div>
+
+<!-- Right side of the screen - Forms and Actions -->
+
+            <div id="main-container" class="col-md-8">
+                <!-- Course detais screen -->
+                <div class="dynamic-screen" id="course-details" >
+                    <div class="sdb-box-header clearfix">
+                            <h3>Course Name</h3>
+                            <button type="button" class="btn btn-default pull-right" aria-label="add-item">
+                                Edit
+                            </button>
+                    </div>
+
+                    <div class="media sdb-big-media">
+                         <div class="media-left">
+                            <img src="images/julius.jpg" class="media-object">
+                         </div>
+                         <div class="media-body">
+                            <h2 class="media-heading"><span>History</span>, <span id="students-number">666</span> Students</h2>
+                            <p>Uncover archaeology and explore important events from ancient to modern times with online history courses from leading universities and cultural institutions.</p>
+                         </div>
+                     </div> 
+
+
+                        <div class="sdb-list">
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Julius Ceasar</h4>
+                                  <p>058-9565566</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Julius Ceasar</h4>
+                                  <p>058-9565566</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Julius Ceasar</h4>
+                                  <p>058-9565566</p>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                
+                <!-- Student detais screen -->
+                <div class="dynamic-screen" id="student-screen" >
+                    <div class="sdb-box-header clearfix" id="student-screen-header">
+                            <h3>Student Name</h3>
+                            <button type="button" class="btn btn-default pull-right" aria-label="add-item" id="edit-student-btn">
+                                Edit
+                            </button>
+                    </div>
+
+                    <div class="media sdb-big-media" id="student-screen-details">
+                         <div class="media-left">
+                           <img src="images/julius.jpg" class="media-object">
+                         </div>
+                         <div class="media-body">
+                           <h2 class="media-heading">Yossi Cohen</h2>
+                           <p class="phone-number">052-123124</p>
+                           <p class="email-adress">Yossi@gmail.com</p>
+                         </div>
+                     </div> 
+
+
+                        <div class="sdb-list" id="student-screen-courses">
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">History</h4>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">History</h4>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                  <img src="images/julius.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">History</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                 
+                <!-- Edit student screen -->
+                <div class="dynamic-screen" id="edit-student">
+   
+                        
+                    <div class="sdb-box-header clearfix screen-header">
+                        <h3>Add Student / Edit Student Name</h3>
+                    </div>
+                    <div class="sdb-edit-form-buttons clearfix">
+                        <button id="save-student" type="button" class="btn btn-default">
+                            Save
+                        </button>
+                        <button id="delete-student" type="button" class="btn btn-default pull-right" aria-label="add-item">
+                            Delete
+                        </button>
+                    </div>
+                    <form id="form-edit-student">
+                        <div id="es-edit-image">
+                            <label for="es-student-image">Image</label>                          
+                            <img src="uploads/julius.jpg" class="sdb-big-image" id="es-student-image">
+                            <div class="file-upload-button" id="image-upload-button">   
+                                <label for="image-upload-input" class="file-upload-label">
+                                    Edit image
+                                </label>
+                                <input id="image-upload-input" class="file-upload-input" type="file" name="file-upload">
+                            </div>
+                            <button type="button" id="upload-test">upload</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="es-student-name">Name</label>
+                            <input type="text" class="form-control" name="name" id="es-student-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="es-student-phone">Phone</label>
+                            <input type="text" class="form-control" name="phone" id="es-student-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="es-student-email">Email</label>
+                            <input type="text" class="form-control" name="email" id="es-student-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="es-courses">Courses</label>
+                            <select class="form-control" name="courses" id="es-courses" multiple>
+                              <option value="1">History</option>
+                              <option value="2">Math</option>
+                              <option value="3">Cell Biology</option>
+                              <option value="4">Geometry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input id="student-id" type="hidden" value="">
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="dynamic-screen" id="edit-adminstrator">
+                    <div class="sdb-box-header clearfix">
+                        <h3>Add Adminstrator / Edit Adminstrator Name</h3>
+                    </div>
+                    <div class="sdb-edit-form-buttons clearfix">
+                        <button id="save-admin" type="button" class="btn btn-default">
+                            Save
+                        </button>
+                        <button id="delete-admin" type="button" class="btn btn-default pull-right" aria-label="add-item">
+                            Delete
+                        </button>
+                    </div>
+                    <form id="form-edit-admin">
+                        <div class="form-group">
+                            <label for="ea-admin-name">Name</label>
+                            <input type="text" class="form-control" id="es-admin-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="ea-admin-phone">Phone</label>
+                            <input type="text" class="form-control" id="es-admin-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="ea-admin-email">Email</label>
+                            <input type="text" class="form-control" id="es-admin-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="ea-admin-role">Role</label>
+                            <input type="text" class="form-control" id="ea-admin-role">
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>                           
+                            <img src="images/julius.jpg" class="sdb-big-image">                        
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>           
+        
+     
+        
+        <!--DEMO STUDENTS LIST HTML
+                            <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Julius Ceasar</h4>
+                          <p>058-9565566</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Julius Ceasar</h4>
+                          <p>058-9565566</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Julius Ceasar</h4>
+                          <p>058-9565566</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                          <img src="images/julius.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Julius Ceasar</h4>
+                          <p>058-9565566</p>
+                        </div>
+                    </div>
+        -->
+        
+    </body>
+</html>

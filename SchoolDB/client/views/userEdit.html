@@ -1,0 +1,93 @@
+<div class="sdb-box-header clearfix screen-header" ng-init="getUserDetails()">
+        <h3>Add User / Edit {{userForEdit.username}}</h3>
+    </div>
+    <div class="sdb-edit-form-buttons clearfix">
+        <button id="save-student" type="button" class="btn btn-default" ng-click="saveUser()">
+                    <!-- <button id="save-student" type="button" class="btn btn-default" ng-click="updateStudent()"> -->
+
+            Save
+        </button>
+        <button id="delete-student" type="button" class="btn btn-default pull-right" aria-label="add-item">
+            Delete
+        </button>
+    </div>
+    <form id="form-edit-user">
+        <div id="es-edit-image">
+            <label for="es-user-image">Image</label>                          
+            <img src="{{userForEdit.image}}" class="sdb-big-image" id="es-user-image">
+            <!-- image upload zone -->
+            <!-- <input type="file" file-model="myFile"/><br><br>
+            <button ng-click="uploadFile()">Upload</button> -->
+
+            <!-- <h4>new image upload</h4> -->
+            <input type="file" name="profileImage" onchange="angular.element(this).scope().uploadImage(this.files)"/>
+            
+
+            <!-- <input type="file" ngf-select="onFileSelect($files)" multiple>  
+            <div class="file-upload-button" id="image-upload-button">    -->
+                <!-- <label for="image-upload-input" class="file-upload-label">
+                    Edit image
+                </label> -->
+                <!-- <input id="image-upload-input" class="file-upload-input" type="file" name="file-upload"> -->
+              
+                <!-- <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>                 -->
+                <!-- <input 
+                type="file" 
+                ngf-select 
+                ng-model="up.file" 
+                name="file" 
+                ngf-pattern="'image/*'"
+                accept="image/*" 
+                ngf-max-size="20MB" 
+                />
+                Image thumbnail: <img style="width:100px;" ngf-thumbnail="up.file || '/thumb.jpg'"/>
+                <i ng-show="up.upload_form.file.$error.required">*required</i><br>
+                <i ng-show="up.upload_form.file.$error.maxSize">File too large 
+                {{up.file.size / 1000000|number:1}}MB: max 20M</i> -->
+ 
+            </div>
+            <!-- <button type="button" id="upload-test">upload</button> -->
+        </div>
+        <div class="form-group">
+            <label for="es-student-name">Name</label>
+            <input type="text" class="form-control" name="name" id="es-student-name" value="{{userForEdit.username}}" ng-model="userForEdit.username">
+        </div>
+        <div class="form-group">
+                <label for="es-student-email">Role</label>
+                <input type="text" class="form-control" name="email" id="es-student-email" value="{{userForEdit.role}}" ng-model="userForEdit.role">
+            </div>
+        <div class="form-group">
+            <label for="es-student-phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="es-student-phone" value="{{userForEdit.phone}}" ng-model="userForEdit.phone">
+        </div>
+        <div class="form-group">
+            <label for="es-student-email">Email</label>
+            <input type="text" class="form-control" name="email" id="es-student-email" value="{{userForEdit.email}}" ng-model="userForEdit.email">
+        </div>
+        <!-- <div>
+            <p ng-repeat="x in courses track by $index" ng-model="student.courses[$index]" ng-true-value="{{x._id}}" ng-false-value="{{undefined}}">
+                {{x.name}}
+            </p>
+        </div> -->
+        <!-- <div class="form-group">
+            <h4>Courses</h4>
+            <div class="checkbox" ng-repeat="x in allCourses track by $index">
+                <label><input type="checkbox" value="{{x._id}}" ng-model="studentCheckedCourses" ng-checked="exists(x._id, student.courses)" ng-click="toggle(x._id, student.courses)">{{x.name}}</label>
+                <!-- <label><input type="checkbox" value="{{x._id}}" ng-model="studentCheckedCourses">{{x.name}}</label> -->
+                
+            </div>
+        </div> -->
+
+        <!-- <div class="form-group"> -->
+            <!-- <h4>Courses</h4> -->
+            <!-- <div class="checkbox" ng-repeat="x in courseSelectionList track by x._id"> -->
+                <!-- <label><input type="checkbox" value="{{x._id}}" ng-model="x.checked" ng-true-value="{{x._id}}" ng-false-value="{{undefined}}">{{x.name}}</label> -->
+                <!-- <label><input type="checkbox" value="[]" ng-model="x.checked" ng-true-value="{{x._id}}" ng-false-value="{{undefined}}">{{x.name}}</label>                 -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <div class="form-group">
+            <input id="student-id" type="hidden" value="">
+        </div>
+    </form>
+</div>
+

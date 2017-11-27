@@ -1,0 +1,25 @@
+<div id="users-list" class="sdb-list col-md-4" ng-init="getUsers()">
+    <!-- create a function GET USERS!!!!! -->
+    <!-- students list header -->
+    <div class="sdb-box-header clearfix">
+        <h3>Adminstrators</h3>
+        <button type="button" class="btn btn-default" aria-label="add-item">
+        <!-- <button type="button" class="btn btn-default" aria-label="add-item" ng-click="showNewStudentScreen()"> -->
+                        
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- students list items -->
+    <div class="media" ng-repeat="x in allUsers">
+        <div class="media-left" ng-click="showUserEdit(x._id)">                    
+        <div class="media-left">
+            <img src={{x.image}} class="media-object">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{x.username}}, {{x.role}}</h4>
+            <p>{{x.phone}}</p>
+            <p>{{x.email}}</p>
+        </div>
+    </div>
+        
+</div>

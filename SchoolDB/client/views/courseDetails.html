@@ -1,0 +1,82 @@
+
+  <!-- zone header -->
+  <div class="sdb-box-header clearfix" ng-init="initInfoPage()">
+      <h3>Course Name</h3>
+      <button type="button" class="btn btn-default pull-right" aria-label="add-item" ng-click="showCourseEdit(course._id)">
+          Edit
+      </button>
+  </div>
+  <!-- course details -->
+  <div class="media sdb-big-media">
+      <div class="media-left">
+        <img src="{{course.image}}" class="media-object">
+      </div>
+      <div class="media-body">
+        <h2 class="media-heading"><span>{{course.name}}</span>, <span id="students-number">{{numberOfStudentsInCourse}}</span> Students</h2>
+        <p>{{course.description}}</p>
+      </div>
+  </div> 
+  <!-- registerd students for this course -->
+  <div class="sdb-list" ng-init="getCourseRegistrations()">
+      <div class="media" ng-repeat="x in courseRegistrations track by $index">
+          <div class="media-left">
+            <img src="{{x.image}}" class="media-object">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{x.name}}</h4>
+            <p>{{x.phone}}</p>
+          </div>
+      </div>
+  </div>
+
+
+<!-- <div class="dynamic-screen" id="course-details" >
+    <div class="sdb-box-header clearfix">
+            <h3>Course Name</h3>
+            <button type="button" class="btn btn-default pull-right" aria-label="add-item">
+                Edit
+            </button>
+    </div>
+
+    <div class="media sdb-big-media">
+          <div class="media-left">
+            <img src="images/julius.jpg" class="media-object">
+          </div>
+          <div class="media-body">
+            <h2 class="media-heading"><span>History</span>, <span id="students-number">666</span> Students</h2>
+            <p>Uncover archaeology and explore important events from ancient to modern times with online history courses from leading universities and cultural institutions.</p>
+          </div>
+      </div> 
+
+
+        <div class="sdb-list">
+            <div class="media">
+                <div class="media-left">
+                  <img src="images/julius.jpg" class="media-object">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Julius Ceasar</h4>
+                  <p>058-9565566</p>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                  <img src="images/julius.jpg" class="media-object">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Julius Ceasar</h4>
+                  <p>058-9565566</p>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                  <img src="images/julius.jpg" class="media-object">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Julius Ceasar</h4>
+                  <p>058-9565566</p>
+                </div>
+            </div>
+        </div>
+
+</div> -->

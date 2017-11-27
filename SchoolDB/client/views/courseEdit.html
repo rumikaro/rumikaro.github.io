@@ -1,0 +1,50 @@
+<div class="sdb-box-header clearfix screen-header" ng-init="getCourseDetails()">
+    <h3>Add Student / Edit {{course.name}}</h3>
+</div>
+<div class="sdb-edit-form-buttons clearfix">
+    <button id="save-course" type="button" class="btn btn-default" ng-click="updateCourse()">
+        Save
+    </button>
+    <button id="delete-course" type="button" class="btn btn-default pull-right" aria-label="add-item" ng-show="numberOfStudentsInCourse==0">
+        Delete
+    </button>
+</div>
+<form id="form-edit-course">
+    <div id="es-edit-image">
+        <label for="es-course-image">Image</label>                          
+        <img src="{{course.image}}" class="sdb-big-image" id="es-course-image">
+        <input type="file" name="profileImage" onchange="angular.element(this).scope().uploadCourseImage(this.files)"/>        
+        <!-- <div class="file-upload-button" id="image-upload-button">   
+            <label for="image-upload-input" class="file-upload-label">
+                Edit image
+            </label>
+            <input id="image-upload-input" class="file-upload-input" type="file" name="file-upload">
+        </div>
+        <button type="button" id="upload-test">upload</button> -->
+    </div>
+    <div class="form-group">
+        <label for="es-course-name">Name</label>
+        <input type="text" class="form-control" name="name" id="es-student-name" value="{{course.name}}" ng-model="course.name">
+        
+    </div>
+    <div class="form-group">
+        <label for="es-course-description">Descriptions</label>
+        <input type="text" class="form-control" name="description" id="es-course-description" value="{{course.description}}" ng-model="course.description">
+        
+    </div>
+    <div ng-init="getCourseRegistrations()">
+        <p>Total {{numberOfStudentsInCourse}} students taking this course</p>
+    </div>
+
+    <div>
+        <p ng-repeat="x in students track by x._id">
+            {{x.name}}
+        </p>
+    </div>
+
+    <div class="form-group">
+        <input id="course-id" type="hidden" value="">
+    </div>
+</form>
+</div>
+
